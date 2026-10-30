@@ -11,7 +11,7 @@
           <p class="case-introduction">{{c.description}}</p>
           <div class="case-actions">
             <span class="case-status"><span class="case-status-dot" aria-hidden="true"></span>{{c.state}}</span>
-            @if(c.slug !== 'procar'){<a class="case-secondary-link" routerLink="/workspace">Conhecer demo pública independente ↗</a>}
+            @if(c.demoUrl){<a class="case-secondary-link" [href]="c.demoUrl" target="_blank" rel="noopener noreferrer">Testar demonstração real ↗</a>}
           </div>
         </div>
         <aside class="case-hero-side" aria-label="Visão geral do projeto">
