@@ -7,6 +7,7 @@ export interface TechnicalCase {
   subtitle: string;
   description: string;
   state: string;
+  demoUrl?: string;
   highlights: string[];
   problem: string[];
   solution: string[];
@@ -56,9 +57,10 @@ export const TECHNICAL_CASES: Record<string, TechnicalCase> = {
   },
   'fota-ai-agent': {
     slug: 'fota-ai-agent', ordinal: '03', eyebrow: 'ESTUDO DE CASO · ENGENHARIA DE IA',
-    title: 'FOTA AI Agent', subtitle: 'De alterações de código a análises técnicas mais claras.',
+    title: 'FOTA AI Agent', subtitle: 'Análise de commits e regras FOTA da Positivo e de integrações ODM/Android.',
     description: 'Desenvolvi uma ferramenta para apoiar a análise de commits e diffs em projetos de software da Positivo Tecnologia. O agente recebe informações de alterações de código e organiza uma análise técnica orientada à demanda, com resumos, impactos e recomendações de validação.',
-    state: 'Ferramenta em utilização interna · Interface web e terminal',
+    state: 'Ferramenta interna · demo pública com dados sintéticos',
+    demoUrl: 'https://fota-engineering-suite-demo.vercel.app/fota-ai-agent/',
     highlights: ['Análise contextual de commits e diffs', 'Relatórios técnicos estruturados', 'Acesso via web e terminal'],
     problem: [
       'Investigar mudanças de código pode exigir leitura manual de diffs extensos, identificação dos módulos afetados e tradução dos detalhes técnicos em informações úteis para validação.',
@@ -82,15 +84,16 @@ export const TECHNICAL_CASES: Record<string, TechnicalCase> = {
     ],
     deliverables: ['Resumo técnico da alteração', 'Mapa de mudanças e impactos possíveis', 'Release notes sugeridas', 'Checklist de validação de QA'],
     stack: ['Python', 'Django', 'Git', 'Gemini', 'Ollama', 'Qwen', 'LLMs'],
-    implementation: 'Projeto desenvolvido no contexto profissional e utilizado internamente. O conteúdo desta página descreve capacidades e decisões em alto nível; não apresenta código de propriedade da empresa nem integrações internas.',
+    implementation: 'Projeto desenvolvido no contexto profissional e utilizado internamente. A demonstração pública é uma versão isolada, com processamento local, sem LLM ou conexões corporativas, usando somente dados fictícios.',
     disclosure: 'As recomendações geradas pelo modelo são apoio à análise humana e devem ser verificadas por quem conhece o contexto do código.',
     nextSlug: 'fota-log-analyzer', nextTitle: 'FOTA Log Analyzer'
   },
   'fota-log-analyzer': {
     slug: 'fota-log-analyzer', ordinal: '04', eyebrow: 'ESTUDO DE CASO · DIAGNÓSTICO ASSISTIDO POR IA',
-    title: 'FOTA Log Analyzer', subtitle: 'Logs extensos transformados em evidências para investigar falhas.',
+    title: 'FOTA Log Analyzer', subtitle: 'Diagnóstico de falhas de atualização FOTA/OTA com evidências verificáveis.',
     description: 'Criei uma ferramenta para auxiliar a investigação de falhas técnicas em projetos da Positivo Tecnologia. Ela recebe logs, identifica sinais relevantes e utiliza LLMs para organizar hipóteses de causa e possíveis próximos passos de diagnóstico.',
-    state: 'Ferramenta em utilização interna · Interface web e terminal',
+    state: 'Ferramenta interna · demo pública com dados sintéticos',
+    demoUrl: 'https://fota-engineering-suite-demo.vercel.app/fota-log-analyzer/',
     highlights: ['Leitura de logs técnicos', 'Hipóteses e evidências organizadas', 'Acesso via web e terminal'],
     problem: [
       'Logs de execução podem reunir grande volume de mensagens, avisos e erros. Encontrar o trecho útil e construir uma hipótese técnica costuma exigir pesquisa e correlação manual de eventos.',
@@ -114,7 +117,7 @@ export const TECHNICAL_CASES: Record<string, TechnicalCase> = {
     ],
     deliverables: ['Erro principal identificado', 'Trechos relevantes do log', 'Hipóteses de causa', 'Sugestões de próximos passos'],
     stack: ['Python', 'LLMs', 'Análise de logs', 'Debugging', 'Web', 'CLI'],
-    implementation: 'Projeto desenvolvido no contexto profissional e utilizado internamente. Os detalhes internos de infraestrutura, códigos e registros corporativos não são reproduzidos nesta página.',
+    implementation: 'Projeto desenvolvido no contexto profissional e utilizado internamente. A demonstração pública utiliza cenários sintéticos e um parser local, sem reproduzir logs reais nem integrações corporativas.',
     disclosure: 'Um diagnóstico de IA é uma hipótese de trabalho, não uma confirmação automática de causa raiz. A validação final depende da análise técnica.',
     nextSlug: 'fota-ai-agent', nextTitle: 'FOTA AI Agent'
   }
