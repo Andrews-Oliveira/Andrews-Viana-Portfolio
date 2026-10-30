@@ -1,0 +1,57 @@
+@if (study(); as c) {
+  <article class="case-page">
+    <div class="case-ambient" aria-hidden="true"></div>
+    <div class="container case-wrap">
+      <a class="case-back" routerLink="/" fragment="projetos">← Voltar aos projetos</a>
+      <header class="case-hero">
+        <div class="case-hero-main">
+          <p class="case-kicker">{{c.eyebrow}} <span> / {{c.ordinal}}</span></p>
+          <h1>{{c.title}}<span class="case-period">.</span></h1>
+          <p class="case-subtitle">{{c.subtitle}}</p>
+          <p class="case-introduction">{{c.description}}</p>
+          <div class="case-actions">
+            <span class="case-status"><span class="case-status-dot" aria-hidden="true"></span>{{c.state}}</span>
+            <a class="case-secondary-link" routerLink="/workspace">Conhecer demo pública independente ↗</a>
+          </div>
+        </div>
+        <aside class="case-hero-side" aria-label="Visão geral do projeto">
+          <div class="case-terminal-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span class="case-side-caption">ENGINEERING / AI</span>
+          <div class="case-side-art" aria-hidden="true">{{c.ordinal === '03' ? '{ diff }' : '$_ logs'}}</div>
+          @for (feature of c.highlights; track feature) {
+            <div class="case-side-feature"><span>✓</span>{{feature}}</div>
+          }
+          <small>Representação gráfica — não é uma captura do sistema interno.</small>
+        </aside>
+      </header>
+      @if (c.screenshots; as screenshots) {
+        @if (screenshots.length > 0) {
+          <section class="case-gallery" aria-label="Capturas autorizadas do projeto">
+            <div class="case-section-heading"><div><span class="case-section-number">INTERFACE REAL</span><h2>Projeto em funcionamento<span class="case-period">.</span></h2></div></div>
+            <div class="case-gallery-grid">@for (shot of screenshots; track shot.src) {<figure><img [src]="shot.src" [alt]="shot.alt" loading="lazy"/><figcaption>{{shot.caption}}</figcaption></figure>}</div>
+          </section>
+        }
+      }
+      <div class="case-section-grid">
+        <section class="case-panel" aria-labelledby="problem-title"><span class="case-section-number">01 / CONTEXTO</span><h2 id="problem-title">O problema</h2>@for (p of c.problem; track p) {<p>{{p}}</p>}</section>
+        <section class="case-panel" aria-labelledby="solution-title"><span class="case-section-number">02 / ABORDAGEM</span><h2 id="solution-title">A solução</h2>@for (p of c.solution; track p) {<p>{{p}}</p>}</section>
+      </div>
+      <section class="case-process" aria-labelledby="process-title">
+        <div class="case-section-heading"><div><span class="case-section-number">03 / ENGENHARIA</span><h2 id="process-title">Como funciona<span class="case-period">.</span></h2></div><p>Fluxo funcional descrito em alto nível, sem exposição de detalhes internos.</p></div>
+        <div class="case-steps">@for (step of c.workflow; track step.number) {<div class="case-step"><span>{{step.number}}</span><h3>{{step.title}}</h3><p>{{step.description}}</p></div>}</div>
+      </section>
+      <div class="case-section-grid case-details">
+        <section class="case-panel"><span class="case-section-number">04 / CONTRIBUIÇÃO</span><h2>Meu papel no projeto</h2><ul class="case-list">@for (s of c.contributions; track s) {<li>{{s}}</li>}</ul></section>
+        <section class="case-panel"><span class="case-section-number">05 / RESULTADOS DA FERRAMENTA</span><h2>O que ela entrega</h2><ul class="case-list">@for (s of c.deliverables; track s) {<li>{{s}}</li>}</ul></section>
+      </div>
+      <section class="case-tech" aria-label="Tecnologias e contexto de implementação">
+        <div><span class="case-section-number">STACK UTILIZADA</span><div class="case-chips">@for (skill of c.stack; track skill) {<span>{{skill}}</span>}</div></div>
+        <div><span class="case-section-number">CONTEXTO DE USO</span><p>{{c.implementation}}</p></div>
+      </section>
+      <aside class="case-care" role="note"><strong>Validação e responsabilidade técnica</strong><p>{{c.disclosure}}</p></aside>
+      <footer class="case-footer"><a routerLink="/" fragment="projetos">← Todos os projetos</a><a [routerLink]="'/case/'+c.nextSlug">Próximo estudo de caso <strong>{{c.nextTitle}}</strong> ↗</a></footer>
+    </div>
+  </article>
+} @else {
+  <div class="container case-not-found"><h1>Estudo de caso não encontrado.</h1><a routerLink="/">Voltar ao portfólio</a></div>
+}
