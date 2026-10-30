@@ -1,0 +1,39 @@
+<app-lab-nav />
+    <div class="page-header compact">
+<div>
+<div class="eyebrow">LABORATÓRIO <span class="eyebrow-dash">/</span> ACTIVITY</div>
+<h1>Histórico<span class="mint-text">.</span>
+</h1>
+<p class="page-intro">Últimos relatórios deste navegador, salvos apenas no armazenamento local.</p>
+</div>
+<div class="page-header-extra">
+<button class="btn btn-secondary" type="button" (click)="clear()" [disabled]="!history.count()">Limpar histórico</button>
+</div>
+</div>
+    <div class="history-layout">
+      <div class="history-list">
+<div class="history-list-head">
+<span>RELATÓRIOS</span>
+<span>{{history.count()}} / 12</span>
+</div>
+        @if(history.count() === 0) {<div class="history-empty">
+<div class="history-empty-icon">◷</div>
+<h3>Sem análises por aqui.</h3>
+<p>Seu histórico aparecerá depois de testar o playground.</p>
+<a class="btn btn-primary" routerLink="/workspace">Executar primeira análise ↗</a>
+</div>}
+        @for (item of history.items(); track item.id) {<button class="history-row" type="button" [class.history-active]="selected()?.id === item.id" (click)="selected.set(item)">
+<span class="history-type">{{item.kind === 'commit' ? '⌘' : '⌁'}}</span>
+<span class="history-row-main">
+<strong>{{item.title}}</strong>
+<small>{{item.kind === 'commit' ? 'Commit Analyzer' : 'Log Analyzer'}} · {{item.mode === 'demo' ? 'Demo' : 'Gemini'}}</small>
+</span>
+<span class="history-date">{{item.generatedAt | date:'dd/MM HH:mm'}}</span>
+</button>}
+      </div>
+      <div class="history-detail">
+<div class="history-detail-title">PREVIEW DO RELATÓRIO</div>@if(selected(); as item) {<app-result-panel [result]="item"/>}@else {<div class="detail-placeholder">
+<span>◇</span>
+<p>Selecione uma análise para revisar o relatório.</p>
+</div>}</div>
+    </div>

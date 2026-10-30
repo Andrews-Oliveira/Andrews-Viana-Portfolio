@@ -1,0 +1,34 @@
+<app-portfolio-hero [profile]="profile" />
+
+<section class="section about-section" id="sobre" aria-labelledby="about-title">
+  <div class="container about-layout">
+    <div class="about-left"><span class="section-kicker"><span class="kicker-dot"></span> UM POUCO SOBRE MIM</span><h2 id="about-title">Curiosidade para aprender. <span class="text-violet">Código para transformar.</span></h2><div class="about-decoration"><span>&lt;/&gt;</span><div class="about-decoration-orbit"></div></div></div>
+    <div class="about-right">@for(paragraph of profile.about;track paragraph){<p>{{paragraph}}</p>}<div class="about-focus"><span class="about-focus-icon">✳</span><div><strong>Minha direção</strong><p>Unir engenharia de software, boas práticas e inteligência artificial para criar produtos úteis, confiáveis e bem construídos.</p></div></div></div>
+  </div>
+  <div class="container expertise-rail"><div><span>01 /</span><strong>Android & AOSP</strong><small>Engenharia de software</small></div><div><span>02 /</span><strong>Inteligência Artificial</strong><small>Integração de LLMs</small></div><div><span>03 /</span><strong>Full Stack</strong><small>Aplicações ponta a ponta</small></div></div>
+</section>
+
+<app-career-timeline [experience]="profile.experience" [education]="profile.education" />
+<app-project-gallery [projects]="profile.projects" />
+
+<section class="section stack-section" id="tecnologias" aria-labelledby="stack-title">
+  <div class="container"><div class="section-heading"><div><span class="section-kicker"><span class="kicker-dot"></span> MINHA CAIXA DE FERRAMENTAS</span><h2 id="stack-title">Tecnologias que fazem <span class="text-violet">parte da jornada.</span></h2></div><p>Do front-end à infraestrutura, passando por APIs e engenharia de IA.</p></div>
+    <div class="skills-grid">@for(group of profile.skillGroups;track group.label){<article class="skill-card"><div class="skill-head"><span class="skill-symbol">{{ $index === 0 ? '◈' : $index === 1 ? '⌘' : $index === 2 ? '⬡' : '✳' }}</span><span class="skill-index">0{{ $index + 1 }}</span></div><h3>{{group.label}}</h3><div class="skill-pills">@for(skill of group.skills;track skill){<span>{{skill}}</span>}</div></article>}</div>
+    <p class="skill-disclosure">Competências adquiridas em contextos distintos: experiência profissional, projetos próprios e formação acadêmica.</p>
+  </div>
+</section>
+
+<section class="section lab-teaser" aria-labelledby="teaser-title">
+  <div class="container"><div class="lab-teaser-inner"><div class="lab-teaser-noise"></div><div class="lab-teaser-copy"><span class="teaser-eyebrow">✧ DO PORTFÓLIO PARA A PRÁTICA</span><h2 id="teaser-title">Não é só sobre o que eu sei.<br/><em>É sobre o que eu construo.</em></h2><p>Explore uma demonstração independente de IA aplicada à engenharia de software: análise de diffs e diagnóstico de logs, com exemplos totalmente fictícios.</p><a routerLink="/workspace" class="button button-light">Experimentar o laboratório <span>↗</span></a></div><div class="lab-teaser-art" aria-hidden="true"><div class="teaser-orbit teaser-orbit-one"></div><div class="teaser-orbit teaser-orbit-two"></div><span>✳</span><small>AI<br/>ENGINEERING</small></div></div></div>
+</section>
+
+<section class="section contact-section" id="contato" aria-labelledby="contact-title">
+  <div class="container contact-layout"><div><span class="section-kicker"><span class="kicker-dot"></span> O PRÓXIMO CAPÍTULO</span><h2 id="contact-title">Grandes ideias começam com <span class="text-violet">uma conversa.</span></h2><p>Aberto a oportunidades em engenharia de software, desenvolvimento de produtos e inteligência artificial.</p><div class="contact-links">
+    @if(profile.social.linkedin){<a [href]="profile.social.linkedin" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>}
+    @if(profile.social.github){<a [href]="profile.social.github" target="_blank" rel="noopener noreferrer">GitHub ↗</a>}
+    @if(profile.social.email){<a [href]="'mailto:' + profile.social.email">E-mail ↗</a>}
+    @if(profile.social.resume){<a [href]="profile.social.resume" target="_blank" rel="noopener noreferrer">Currículo ↗</a>}
+    <a routerLink="/workspace">Conheça minhas demos ↗</a>
+  </div></div><div class="contact-monogram" aria-hidden="true">a<span>.</span></div></div>
+</section>
+<footer class="footer"><div class="container footer-inner"><div class="footer-signature"><span>av<span>.</span></span><p>Andrews Viana de Oliveira<br/><small>Software Developer · GenAI</small></p></div><div class="footer-meta"><span>Feito com propósito, Angular e café ☕</span><span>Manaus · Brasil · {{currentYear}}</span></div><a href="#conteudo" class="back-to-top" aria-label="Voltar ao topo">↑</a></div><div class="container footer-disclaimer">Portfólio independente. Não utiliza informações internas, repositórios ou dados proprietários de empresas.</div></footer>

@@ -1,0 +1,45 @@
+    @if (result(); as report) {
+      <section class="result-view" aria-live="polite">
+        <div class="result-heading">
+          <div>
+<div class="eyebrow mint-text">✦ ANÁLISE CONCLUÍDA</div>
+<h2>{{report.title}}</h2>
+</div>
+          <span class="pill" [class.pill-demo]="report.mode === 'demo'">{{report.mode === 'demo' ? 'SIMULAÇÃO' : 'GEMINI · AO VIVO'}}</span>
+        </div>
+        <div class="result-meta">
+<span>{{report.kind === 'commit' ? 'Code Review' : 'Log Analysis'}}</span>
+<span>•</span>
+<span>{{report.generatedAt | date:'dd/MM/yyyy HH:mm'}}</span>
+<span>•</span>
+<span>{{report.model}}</span>
+</div>
+        <div class="summary-block">
+<span class="summary-label">RESUMO EXECUTIVO</span>
+<p>{{report.summary}}</p>
+</div>
+        <div class="section-label-row">
+<h3>Observações técnicas</h3>
+<span>{{report.findings.length}} itens</span>
+</div>
+        <div class="finding-list">
+          @for (finding of report.findings; track $index) {
+            <article class="finding-card">
+              <div class="finding-top">
+<strong>{{$index + 1}}. {{finding.title}}</strong>
+<span class="severity" [class]="'severity severity--' + finding.severity">{{severityText(finding.severity)}}</span>
+</div>
+              <p>{{finding.explanation}}</p>
+              @if (finding.evidence) {<div class="evidence">
+<span>EVIDÊNCIA</span>
+<code>{{finding.evidence}}</code>
+</div>}
+            </article>
+          }
+        </div>
+        <h3 class="recommendations-title">Próximos passos recomendados</h3>
+        <ul class="recommendation-list">@for (item of report.recommendations; track $index) {<li>
+<span>✓</span>{{item}}</li>}</ul>
+        <div class="result-disclaimer">⚑ Saída de demonstração ou IA: as recomendações são hipóteses e exigem validação técnica humana. Não substituem testes.</div>
+      </section>
+    }

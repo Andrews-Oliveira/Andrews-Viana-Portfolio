@@ -1,0 +1,112 @@
+<app-lab-nav />
+    <div class="page-header">
+<div>
+<div class="eyebrow">VISÃO GERAL <span class="eyebrow-dash">/</span> LAB OVERVIEW</div>
+<h1>IA aplicada à<br/>
+<span>engenharia de software.</span>
+</h1>
+<p class="page-intro">Um laboratório independente para explorar análise de código, diagnóstico de logs e integração segura de LLMs.</p>
+</div>
+<span class="header-label">PORTFOLIO PROJECT <span>↗</span>
+</span>
+</div>
+    <section class="hero-panel">
+      <div class="hero-grid">
+</div>
+      <div class="hero-copy">
+<span class="hero-kicker">
+<span class="live-dot">
+</span> SISTEMA PRONTO PARA EXPLORAR</span>
+<h2>Transforme sinais técnicos<br/>em <em>insights acionáveis.</em>
+</h2>
+<p>Teste dois fluxos de análise com exemplos 100% fictícios. Habilite Gemini por uma função protegida no servidor quando quiser executar análises reais.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" routerLink="/workspace">Abrir playground <span>↗</span>
+</a>
+<a class="btn btn-ghost-light" routerLink="/about">Conhecer arquitetura <span>→</span>
+</a>
+</div>
+</div>
+      <div class="hero-art" aria-hidden="true">
+<div class="orbit orbit-a">
+</div>
+<div class="orbit orbit-b">
+</div>
+<div class="hero-glyph">✳</div>
+<div class="orbit-tag orbit-tag-1">&lt;/&gt; Code review</div>
+<div class="orbit-tag orbit-tag-2">◎ LLM pipeline</div>
+<div class="orbit-tag orbit-tag-3">⌁ Log analysis</div>
+</div>
+    </section>
+    <div class="section-head">
+<div>
+<div class="eyebrow">CAPACIDADES</div>
+<h2>Explore os módulos</h2>
+</div>
+<a class="text-action" routerLink="/workspace">Ir ao laboratório →</a>
+</div>
+    <div class="module-grid">
+      <a class="module-card" routerLink="/workspace" [queryParams]="{type:'commit'}">
+<div class="module-top">
+<span class="module-icon">⌘</span>
+<span class="module-index">01 / CODE</span>
+</div>
+<h3>Commit Analyzer</h3>
+<p>Interprete diffs, encontre riscos potenciais e gere sugestões de testes com apoio de IA.</p>
+<div class="module-tags">
+<span>DIFFS</span>
+<span>RISCOS</span>
+<span>QA</span>
+</div>
+<div class="module-card-foot">Explorar ferramenta <span>↗</span>
+</div>
+</a>
+      <a class="module-card" routerLink="/workspace" [queryParams]="{type:'log'}">
+<div class="module-top">
+<span class="module-icon">⌁</span>
+<span class="module-index">02 / OBSERVABILITY</span>
+</div>
+<h3>Log Analyzer</h3>
+<p>Encontre erros relevantes em registros técnicos e organize hipóteses de causa raiz.</p>
+<div class="module-tags">
+<span>LOGS</span>
+<span>DEBUG</span>
+<span>DIAGNÓSTICO</span>
+</div>
+<div class="module-card-foot">Explorar ferramenta <span>↗</span>
+</div>
+</a>
+    </div>
+    <div class="section-head smaller">
+<div>
+<div class="eyebrow">ESTADO DO PROJETO</div>
+<h2>Em números</h2>
+</div>
+<span class="muted-note">Indicadores da demonstração, não de produção</span>
+</div>
+    <div class="metric-grid">
+      <div class="metric">
+<div class="metric-label">MÓDULOS DE ANÁLISE <span>↗</span>
+</div>
+<strong>02</strong>
+<span>Code & Logs</span>
+</div>
+      <div class="metric">
+<div class="metric-label">EXEMPLOS SINTÉTICOS <span>↗</span>
+</div>
+<strong>04</strong>
+<span>Sem dados corporativos</span>
+</div>
+      <div class="metric">
+<div class="metric-label">ANÁLISES NESTE BROWSER <span>↗</span>
+</div>
+<strong>{{history.count()}}</strong>
+<span>Histórico local</span>
+</div>
+    </div>
+    <div class="independent-note">
+<span>◇</span>
+<p>
+<strong>Projeto pessoal e independente.</strong> Esta demonstração não utiliza código, logs ou infraestrutura de terceiros. Os exemplos são sintéticos e os resultados do modo demo são estáticos.</p>
+<a routerLink="/about">Saiba mais →</a>
+</div>

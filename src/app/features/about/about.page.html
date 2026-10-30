@@ -1,0 +1,87 @@
+<app-lab-nav />
+    <div class="page-header compact">
+<div>
+<div class="eyebrow">DOCUMENTAÇÃO <span class="eyebrow-dash">/</span> TECHNICAL OVERVIEW</div>
+<h1>Por trás do projeto<span class="mint-text">.</span>
+</h1>
+<p class="page-intro">Arquitetura simples, componentes isolados e integração segura com serviços de IA generativa.</p>
+</div>
+<span class="header-label">OPEN PORTFOLIO</span>
+</div>
+    <div class="about-grid">
+<section class="about-card about-main">
+<div class="eyebrow">ARQUITETURA</div>
+<h2>Do input ao insight</h2>
+<p>O Angular renderiza o laboratório e envia conteúdos de exemplo para uma Vercel Function somente quando o usuário escolhe o modo de análise ao vivo.</p>
+<div class="architecture-flow">
+<div>
+<strong>Angular 21</strong>
+<small>SPA · Components · Signals</small>
+</div>
+<span>↓</span>
+<div>
+<strong>Vercel Function</strong>
+<small>Validation · Access Control</small>
+</div>
+<span>↓</span>
+<div>
+<strong>Gemini API</strong>
+<small>Structured JSON Output</small>
+</div>
+<span>↓</span>
+<div>
+<strong>Report UI</strong>
+<small>Findings · Next Steps</small>
+</div>
+</div>
+</section>
+      <section class="about-card">
+<div class="eyebrow">TECH STACK</div>
+<h2>Feito para evoluir</h2>
+<div class="stack-list">
+<div>
+<span>◈</span>
+<strong>Angular</strong>
+<small>Standalone components</small>
+</div>
+<div>
+<span>◈</span>
+<strong>TypeScript</strong>
+<small>Types & contracts</small>
+</div>
+<div>
+<span>◈</span>
+<strong>Vercel</strong>
+<small>SPA + Functions</small>
+</div>
+<div>
+<span>◈</span>
+<strong>Gemini</strong>
+<small>LLM API integration</small>
+</div>
+</div>
+</section>
+      <section class="about-card">
+<div class="eyebrow">SECURITY BY DESIGN</div>
+<h2>Segurança e limites</h2>
+<p>Não existem credenciais embutidas no código do navegador. Para execução real, o servidor exige ativação explícita, código de acesso e variável secreta Gemini.</p>
+<ul class="check-list">
+<li>Exemplos sintéticos e nenhuma dependência de sistemas internos.</li>
+<li>Modo demo determinístico, sem alegar processamento por IA.</li>
+<li>Sem banco de dados: histórico local, limitado a 12 resultados.</li>
+<li>Sem autenticação pública de usuários; live restrito por código.</li>
+<li>Análises são sugestões, não diagnósticos garantidos.</li>
+</ul>
+</section>
+      <section class="about-card">
+<div class="eyebrow">PARA RECRUTADORES</div>
+<h2>O que esta demo demonstra?</h2>
+<p>Desenvolvimento Angular por responsabilidades, contratos tipados, chamadas de API, validação de entrada, tratamento de erros e integração de LLMs em um fluxo de produto completo.</p>
+<div class="about-callout">
+<span>✳</span>
+<p>
+<strong>Projeto independente de portfólio.</strong> Não associado, endossado ou integrado a qualquer empresa. Código e exemplos elaborados para fins demonstrativos.</p>
+</div>
+<a routerLink="/workspace" class="btn btn-primary">Testar o laboratório ↗</a>
+</section>
+</div>

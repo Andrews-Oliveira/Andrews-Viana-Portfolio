@@ -1,0 +1,34 @@
+<div class="site-shell">
+  <header class="site-header">
+    <div class="header-inner container">
+      <a routerLink="/" class="site-logo" aria-label="Andrews Viana, página inicial" (click)="mobileMenu.set(false)">
+        <span class="logo-icon">a<span>.</span></span>
+        <span class="logo-wordmark">andrews<span>viana</span><small>DEVELOPER PORTFOLIO</small></span>
+      </a>
+      <nav class="desktop-nav" aria-label="Navegação principal">
+        <a routerLink="/" fragment="sobre">Sobre</a>
+        <a routerLink="/" fragment="experiencia">Trajetória</a>
+        <a routerLink="/" fragment="projetos">Projetos</a>
+        <a routerLink="/" fragment="tecnologias">Stack</a>
+        <a routerLink="/overview" routerLinkActive="nav-current">Laboratório IA</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-contact" routerLink="/" fragment="contato">Vamos conversar <span aria-hidden="true">↗</span></a>
+        <button class="mobile-menu-toggle" type="button" [attr.aria-expanded]="mobileMenu()" aria-controls="mobile-menu" aria-label="Abrir ou fechar menu" (click)="mobileMenu.set(!mobileMenu())">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    @if(mobileMenu()) {
+      <nav id="mobile-menu" class="mobile-nav" aria-label="Menu para celular">
+        <a routerLink="/" fragment="sobre" (click)="mobileMenu.set(false)">Sobre mim</a>
+        <a routerLink="/" fragment="experiencia" (click)="mobileMenu.set(false)">Trajetória</a>
+        <a routerLink="/" fragment="projetos" (click)="mobileMenu.set(false)">Projetos</a>
+        <a routerLink="/" fragment="tecnologias" (click)="mobileMenu.set(false)">Tecnologias</a>
+        <a routerLink="/overview" (click)="mobileMenu.set(false)">Laboratório de IA</a>
+        <a routerLink="/" fragment="contato" (click)="mobileMenu.set(false)">Contato</a>
+      </nav>
+    }
+  </header>
+  <main id="conteudo"><router-outlet /></main>
+</div>

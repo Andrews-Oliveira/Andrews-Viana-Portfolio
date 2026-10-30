@@ -1,0 +1,114 @@
+<app-lab-nav />
+    <div class="page-header compact">
+<div>
+<div class="eyebrow">LABORATÓRIO <span class="eyebrow-dash">/</span> AI PLAYGROUND</div>
+<h1>Seu workspace<span class="mint-text">.</span>
+</h1>
+<p class="page-intro">Insira um diff ou log de exemplo e explore uma análise estruturada.</p>
+</div>
+<div class="page-header-extra">
+<span class="environment-pill">
+<span class="status-dot">
+</span> Ambiente seguro</span>
+</div>
+</div>
+    <div class="workspace-top">
+<div class="workspace-tabs" role="tablist" aria-label="Tipo de análise">
+<button type="button" role="tab" [attr.aria-selected]="kind() === 'commit'" [class.active]="kind() === 'commit'" (click)="switchKind('commit')">⌘ <span>Commit Analyzer</span>
+</button>
+<button type="button" role="tab" [attr.aria-selected]="kind() === 'log'" [class.active]="kind() === 'log'" (click)="switchKind('log')">⌁ <span>Log Analyzer</span>
+</button>
+</div>
+<span class="workspace-version">ANALYSIS ENGINE / v1.0</span>
+</div>
+    <div class="workspace-grid">
+      <section class="editor-panel">
+        <div class="panel-heading">
+<div>
+<span class="panel-step">01</span>
+<h2>Dados de entrada</h2>
+</div>
+<span class="panel-hint">{{kind() === 'commit' ? 'Diff / Patch' : 'Application logs'}}</span>
+</div>
+        <div class="editor-subtitle">Escolha um cenário sintético</div>
+        <div class="sample-list">
+          @for (sample of samples(); track sample.id) {
+            <button type="button" class="sample-chip" [class.chip-active]="selectedSample() === sample.id" (click)="selectSample(sample)">
+<span class="sample-dot">
+</span>
+<span>{{sample.label}}</span>
+</button>
+          }
+        </div>
+        <div class="editor-toolbar">
+<span>
+<span class="code-dot">
+</span>{{kind() === 'commit' ? 'input.diff' : 'application.log'}}</span>
+<span>EDITÁVEL <span class="separator-dot">•</span> {{source().length}} / 14000</span>
+</div>
+        <textarea class="code-editor" spellcheck="false" [attr.aria-label]="kind() === 'commit' ? 'Conteúdo do diff' : 'Conteúdo do log'" [ngModel]="source()" (ngModelChange)="onSourceChange($event)" [maxlength]="14000" placeholder="Cole aqui um exemplo sintético...">
+</textarea>
+        <div class="editor-notice">
+<span>ⓘ</span> Não envie código proprietário, credenciais ou logs com dados pessoais.</div>
+        <div class="panel-heading mode-heading">
+<div>
+<span class="panel-step">02</span>
+<h2>Modo de execução</h2>
+</div>
+</div>
+        <div class="mode-options">
+<button type="button" class="mode-option" [class.mode-selected]="mode() === 'demo'" (click)="mode.set('demo')">
+<span class="mode-radio">
+</span>
+<span>
+<strong>Demo estática</strong>
+<small>Sem chave ou custos · cenário fixo</small>
+</span>
+</button>
+<button type="button" class="mode-option" [class.mode-selected]="mode() === 'live'" (click)="mode.set('live')">
+<span class="mode-radio">
+</span>
+<span>
+<strong>IA em tempo real</strong>
+<small>Gemini API · exige acesso autorizado</small>
+</span>
+</button>
+</div>
+        @if(mode() === 'live') {<div class="live-settings">
+<label for="access-code">Código de acesso ao ambiente</label>
+<input id="access-code" type="password" autocomplete="off" placeholder="Insira o código configurado na Vercel" [ngModel]="accessCode()" (ngModelChange)="accessCode.set($event)"/>
+<p>O código não é salvo. A chave Gemini permanece somente no servidor.</p>
+</div>}
+        @if(error()) {<div class="error-banner" role="alert">⚠ {{error()}}</div>}
+        <div class="form-actions">
+<button class="btn btn-secondary" type="button" (click)="clear()">Limpar</button>
+<button class="btn btn-primary btn-wide" type="button" (click)="analyze()" [disabled]="loading() || source().trim().length < 20 || (mode() === 'live' && !accessCode().trim())">{{loading() ? 'Analisando…' : 'Executar análise'}} <span>↗</span>
+</button>
+</div>
+      </section>
+      <section class="output-panel">
+<div class="panel-heading">
+<div>
+<span class="panel-step">03</span>
+<h2>Resultado da análise</h2>
+</div>
+<span class="panel-hint">REPORT / OUTPUT</span>
+</div>
+        @if(result(); as report) {<app-result-panel [result]="report"/>}
+        @else {<div class="empty-report">
+<div class="empty-orbit">
+<span>✳</span>
+</div>
+<span class="empty-tag">AGUARDANDO INPUT</span>
+<h3>Pronto para analisar.</h3>
+<p>Selecione um dos cenários, escolha o modo de execução e clique em “Executar análise”.</p>
+<div class="empty-steps">
+<span>01 INPUT</span>
+<span>→</span>
+<span>02 PROCESS</span>
+<span>→</span>
+<span>03 INSIGHT</span>
+</div>
+</div>}
+      </section>
+    </div>
