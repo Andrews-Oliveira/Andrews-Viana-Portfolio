@@ -16,7 +16,9 @@ export const PORTFOLIO_PROFILE: PortfolioProfile = {
   ],
   social: {
     github: 'https://github.com/Andrews-Oliveira',
-    // linkedin: 'https://www.linkedin.com/in/SEU-PERFIL/',
+    linkedin: 'https://www.linkedin.com/in/andrews-viana/',
+    whatsapp: 'https://wa.me/5592981704823',
+    phone: '+55 (92) 98170-4823',
     // email: 'SEU-EMAIL',
     // resume: '/curriculo.pdf'
   },
@@ -43,8 +45,8 @@ export const PORTFOLIO_PROFILE: PortfolioProfile = {
   ],
   projects: [
     {index: '01', category: 'PROJETO INDEPENDENTE · GENAI', title: 'GenAI Engineering Studio', summary: 'Laboratório interativo para analisar commits e logs com exemplos sintéticos, relatórios estruturados e uma API serverless preparada para integrar LLMs.', tags: ['Angular', 'TypeScript', 'Gemini API', 'Vercel'], status: 'Demonstração disponível', internalRoute: '/workspace', notice: 'Projeto pessoal independente, com entradas e dados fictícios.'},
-    {index: '02', category: 'PRIMEIRO PROJETO COMERCIAL · FULL STACK', title: 'PROCAR', summary: 'Meu primeiro sistema vendido a um cliente real. Desenvolvi uma plataforma de gestão para oficinas com cadastro de clientes e veículos, orçamentos, ordens de serviço, inspeções, pagamentos e estoque.', tags: ['Angular', 'Django', 'PostgreSQL', 'Docker'], status: 'Primeira venda de software', internalRoute: '/case/procar', notice: 'Projeto comercial independente, apresentado sem dados privados do cliente.'},
-    {index: '03', category: 'PROJETO INTERNO · ENGENHARIA COM IA', title: 'FOTA AI Agent', summary: 'Desenvolvi uma ferramenta para melhorar a análise técnica de commits e diffs nos projetos da empresa. A solução é utilizada internamente por interface web e por comandos no terminal, gerando resumos, impactos e sugestões de validação conforme a demanda.', tags: ['Python', 'Django', 'LLMs', 'Git'], internalRoute: '/case/fota-ai-agent', status: 'Em uso interno · Web + CLI', notice: 'Experiência profissional descrita sem código, dados ou integrações confidenciais.'},
-    {index: '04', category: 'PROJETO INTERNO · DIAGNÓSTICO COM IA', title: 'FOTA Log Analyzer', summary: 'Criei uma ferramenta para otimizar a análise de logs e a investigação de falhas em projetos da empresa. Em utilização interna via site e terminal, ela organiza evidências e propõe hipóteses para apoiar o diagnóstico técnico.', tags: ['Python', 'LLMs', 'Logs', 'Debugging'], internalRoute: '/case/fota-log-analyzer', status: 'Em uso interno · Web + CLI', notice: 'Case descritivo, sem logs reais, arquitetura privada ou dados corporativos.'}
+    {index: '02', category: 'PRIMEIRO PROJETO COMERCIAL · FULL STACK', title: 'PROCAR', summary: 'Meu primeiro sistema vendido a um cliente real. Desenvolvi uma plataforma de gestão para oficinas com cadastro de clientes e veículos, orçamentos, ordens de serviço, inspeções, pagamentos e estoque.', tags: ['Angular', 'Django', 'PostgreSQL', 'Docker'], status: 'Sistema comercial · case disponível', internalRoute: '/case/procar', notice: 'Projeto comercial independente, apresentado sem dados privados do cliente.'},
+    {index: '03', category: 'ENGENHARIA COM IA · FOTA / ODM', title: 'FOTA AI Agent', summary: 'Analisador técnico de commits, diffs e mudanças em regras FOTA e firmware ODM/Android. Organiza evidências, impacto, riscos e verificações de QA. Experimente a versão pública com processamento local e exemplos fictícios.', tags: ['Python', 'Django', 'FOTA', 'ODM', 'Git'], internalRoute: '/case/fota-ai-agent', demoUrl: 'https://fota-engineering-suite-demo.vercel.app/fota-ai-agent/', status: 'Demo pública disponível', notice: 'A demo é isolada: não utiliza logs internos, integrações corporativas ou LLMs externos.'},
+    {index: '04', category: 'DIAGNÓSTICO TÉCNICO · FOTA / OTA', title: 'FOTA Log Analyzer', summary: 'Ferramenta especializada em investigação de falhas de atualização OTA. Processa logs FOTA, identifica padrões de erro e apresenta evidências e ações de diagnóstico. Teste com cenários sintéticos.', tags: ['Python', 'Django', 'FOTA', 'Logs', 'Debugging'], internalRoute: '/case/fota-log-analyzer', demoUrl: 'https://fota-engineering-suite-demo.vercel.app/fota-log-analyzer/', status: 'Demo pública disponível', notice: 'Versão demonstrativa com parser local, sem histórico compartilhado ou envio a LLM.'}
   ]
 };

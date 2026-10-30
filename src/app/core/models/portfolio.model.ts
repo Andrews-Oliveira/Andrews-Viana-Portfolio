@@ -1,6 +1,8 @@
 export interface SocialLinks {
   github?: string;
   linkedin?: string;
+  whatsapp?: string;
+  phone?: string;
   email?: string;
   resume?: string;
 }
@@ -29,6 +31,7 @@ export interface PortfolioProject {
   status: string;
   internalRoute?: string;
   externalUrl?: string;
+  demoUrl?: string;
   notice?: string;
 }
 

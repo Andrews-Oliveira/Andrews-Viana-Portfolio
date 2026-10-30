@@ -18,7 +18,7 @@ import {PortfolioProfile} from '../../../core/models/portfolio.model';
           <p class="hero-description">Desenvolvedor de Software com experiência em <strong>Android/AOSP</strong>, aplicações full stack e integração de <strong>inteligência artificial generativa</strong>.</p>
           <div class="hero-ctas">
             <a class="button button-primary" href="#projetos">Explorar projetos <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" routerLink="/workspace">Testar meu laboratório <span aria-hidden="true">→</span></a>
+            <a class="button button-outline" href="https://fota-engineering-suite-demo.vercel.app/" target="_blank" rel="noopener noreferrer">Testar agentes FOTA <span aria-hidden="true">↗</span></a>
           </div>
           <div class="hero-bottom"><span class="hero-line"></span><span>Manaus, Amazonas · Brasil</span><span class="hero-star">✦</span><span>Engenharia de Software</span></div>
         </div>

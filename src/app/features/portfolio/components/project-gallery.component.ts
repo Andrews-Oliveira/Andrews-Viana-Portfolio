@@ -33,13 +33,16 @@ import {PortfolioProject} from '../../../core/models/portfolio.model';
                 <span class="art-mock-note">VISUAL ILUSTRATIVO</span>
               </div>
               <div class="project-info"><div class="project-category">{{project.category}}</div><div class="project-title-row"><h3>{{project.title}}</h3><span aria-hidden="true">↗</span></div><p class="project-summary">{{project.summary}}</p><div class="tag-list">@for(tag of project.tags; track tag){<span>{{tag}}</span>}</div><div class="project-footer"><span class="project-status"><i></i>{{project.status}}</span>
-                @if(project.internalRoute){<a [routerLink]="project.internalRoute" class="project-link">Explorar <span>↗</span></a>}
-                @else if(project.externalUrl){<a [href]="project.externalUrl" target="_blank" rel="noopener noreferrer" class="project-link">Abrir projeto <span>↗</span></a>}
+                <div class="project-actions">
+                  @if(project.internalRoute){<a [routerLink]="project.internalRoute" class="project-link">Estudo de caso <span>↗</span></a>}
+                  @else if(project.externalUrl){<a [href]="project.externalUrl" target="_blank" rel="noopener noreferrer" class="project-link">Abrir projeto <span>↗</span></a>}
+                  @if(project.demoUrl){<a [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="project-demo-link" [attr.aria-label]="'Testar demonstração de ' + project.title + ' (nova aba)'">Testar demo ↗</a>}
+                </div>
               </div><p class="project-notice">{{project.notice}}</p></div>
             </article>
           }
         </div>
-        <div class="projects-disclaimer"><span>ⓘ</span> Projetos internos são apresentados apenas como estudos de experiência profissional. As demonstrações públicas são independentes e usam dados sintéticos.</div>
+        <div class="projects-disclaimer"><span>ⓘ</span> Os projetos internos são descritos em alto nível. As demos públicas independentes processam exemplos fictícios localmente, sem LLM externo.</div>
       </div>
     </section>
   `
