@@ -13,6 +13,12 @@
         <a routerLink="/overview" routerLinkActive="nav-current">Laboratório IA</a>
       </nav>
       <div class="header-actions">
+        <button class="theme-toggle" type="button" (click)="toggleTheme()"
+          [attr.aria-label]="theme() === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro'"
+          [attr.title]="theme() === 'dark' ? 'Ativar modo claro' : 'Ativar modo escuro'">
+          <span aria-hidden="true">{{ theme() === 'dark' ? '☀' : '☾' }}</span>
+          <span class="theme-toggle-label">{{ theme() === 'dark' ? 'Claro' : 'Escuro' }}</span>
+        </button>
         <a class="header-contact" routerLink="/" fragment="contato">Vamos conversar <span aria-hidden="true">↗</span></a>
         <button class="mobile-menu-toggle" type="button" [attr.aria-expanded]="mobileMenu()" aria-controls="mobile-menu" aria-label="Abrir ou fechar menu" (click)="mobileMenu.set(!mobileMenu())">
           <span></span><span></span><span></span>

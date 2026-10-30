@@ -1,8 +1,16 @@
-# Andrews Viana — Portfolio v2.0
+# Andrews Viana — Portfolio v2.1
 
-Portfólio pessoal de **Andrews Viana de Oliveira**. Uma experiência **light-first** e responsiva, feita com **Angular standalone + TypeScript** e um laboratório independente de IA aplicada à Engenharia de Software.
+Portfólio pessoal de **Andrews Viana de Oliveira**. Uma experiência **dark-first** com alternância entre temas e layout responsivo, feita com **Angular standalone + TypeScript** e um laboratório independente de IA aplicada à Engenharia de Software.
 
 > **Esta é uma versão redesenhada do zero na apresentação visual.** O funcionamento dos analisadores do projeto anterior foi preservado, incluindo os cinco testes da API. O modo demonstrativo funciona com exemplos fictícios; análises verdadeiras com Gemini exigem configuração serverless separada.
+
+## Atualização 2.1 — tema e experiências reais
+
+- Tema escuro por padrão, opção **Claro / Escuro** na barra superior e preferência salva localmente no navegador.
+- **PROCAR:** seu primeiro sistema comercial vendido a um cliente real.
+- **FOTA AI Agent e FOTA Log Analyzer:** ferramentas de apoio à análise técnica utilizadas internamente pela web e pelo terminal, descritas em alto nível sem publicar dados da empresa.
+- GitHub pessoal configurado como contato, sem links fictícios para LinkedIn ou e-mail.
+- As imagens dos projetos corporativos continuam ilustrativas. Não substitua por capturas internas sem autorização e revisão de confidencialidade.
 
 ## Experiência do site
 
@@ -39,8 +47,9 @@ src/
     tokens.css                       <- cores, tipografia, botões
     shell.css                        <- cabeçalho, navegação responsiva
     portfolio.css                    <- landing pessoal, projetos, cards
-    laboratory.css                   <- laboratório em tema claro
+    laboratory.css                   <- laboratório e seus componentes
     responsive.css                   <- breakpoints
+    dark.css                         <- tema escuro, sem alterar o tema claro
 api/analyze.ts                      <- função de servidor com Gemini opcional
 tests/analyze.test.ts                <- testes automatizados da API
 vercel.json                         <- hospedagem estática + function + SPA fallback

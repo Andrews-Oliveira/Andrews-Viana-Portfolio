@@ -15,7 +15,7 @@ export const PORTFOLIO_PROFILE: PortfolioProfile = {
     'Além da atuação profissional, construo aplicações web e soluções com IA generativa. Tenho interesse especial em conectar bons fundamentos de desenvolvimento à capacidade dos modelos de linguagem para criar ferramentas que façam sentido para quem usa.'
   ],
   social: {
-    // github: 'https://github.com/SEU-USUARIO',
+    github: 'https://github.com/Andrews-Oliveira',
     // linkedin: 'https://www.linkedin.com/in/SEU-PERFIL/',
     // email: 'SEU-EMAIL',
     // resume: '/curriculo.pdf'
@@ -43,8 +43,8 @@ export const PORTFOLIO_PROFILE: PortfolioProfile = {
   ],
   projects: [
     {index: '01', category: 'PROJETO INDEPENDENTE · GENAI', title: 'GenAI Engineering Studio', summary: 'Laboratório interativo para analisar commits e logs com exemplos sintéticos, relatórios estruturados e uma API serverless preparada para integrar LLMs.', tags: ['Angular', 'TypeScript', 'Gemini API', 'Vercel'], status: 'Demonstração disponível', internalRoute: '/workspace', notice: 'Projeto pessoal independente, com entradas e dados fictícios.'},
-    {index: '02', category: 'PROJETO FULL STACK · GESTÃO', title: 'PROCAR', summary: 'Sistema de gestão para oficinas: clientes, veículos, orçamentos, ordens de serviço, inspeções, pagamentos e controle de estoque.', tags: ['Angular', 'Django', 'PostgreSQL', 'Docker'], status: 'Case de projeto', notice: 'Projeto real; apresentação sem dados privados do cliente.'},
-    {index: '03', category: 'EXPERIÊNCIA PROFISSIONAL · IA', title: 'FOTA AI Agent', summary: 'Desenvolvimento de agente de apoio à engenharia para interpretar commits e diffs, explicar alterações e sugerir verificações de qualidade.', tags: ['Python', 'Django', 'LLMs', 'Análise de código'], status: 'Case profissional', notice: 'Experiência profissional descrita em alto nível. Código e integrações internas não são divulgados.'},
-    {index: '04', category: 'EXPERIÊNCIA PROFISSIONAL · IA', title: 'FOTA Log Analyzer', summary: 'Ferramenta de apoio à investigação de logs técnicos, organização de evidências e geração de hipóteses para análise humana.', tags: ['Python', 'LLMs', 'Logs', 'Debugging'], status: 'Case profissional', notice: 'Estudo de caso descritivo, sem logs, arquitetura ou dados internos.'}
+    {index: '02', category: 'PRIMEIRO PROJETO COMERCIAL · FULL STACK', title: 'PROCAR', summary: 'Meu primeiro sistema vendido a um cliente real. Desenvolvi uma plataforma de gestão para oficinas com cadastro de clientes e veículos, orçamentos, ordens de serviço, inspeções, pagamentos e estoque.', tags: ['Angular', 'Django', 'PostgreSQL', 'Docker'], status: 'Primeira venda de software', notice: 'Projeto comercial independente, apresentado sem dados privados do cliente.'},
+    {index: '03', category: 'PROJETO INTERNO · ENGENHARIA COM IA', title: 'FOTA AI Agent', summary: 'Desenvolvi uma ferramenta para melhorar a análise técnica de commits e diffs nos projetos da empresa. A solução é utilizada internamente por interface web e por comandos no terminal, gerando resumos, impactos e sugestões de validação conforme a demanda.', tags: ['Python', 'Django', 'LLMs', 'Git'], status: 'Em uso interno · Web + CLI', notice: 'Experiência profissional descrita sem código, dados ou integrações confidenciais.'},
+    {index: '04', category: 'PROJETO INTERNO · DIAGNÓSTICO COM IA', title: 'FOTA Log Analyzer', summary: 'Criei uma ferramenta para otimizar a análise de logs e a investigação de falhas em projetos da empresa. Em utilização interna via site e terminal, ela organiza evidências e propõe hipóteses para apoiar o diagnóstico técnico.', tags: ['Python', 'LLMs', 'Logs', 'Debugging'], status: 'Em uso interno · Web + CLI', notice: 'Case descritivo, sem logs reais, arquitetura privada ou dados corporativos.'}
   ]
 };
