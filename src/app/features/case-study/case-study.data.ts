@@ -22,6 +22,38 @@ export interface TechnicalCase {
 }
 
 export const TECHNICAL_CASES: Record<string, TechnicalCase> = {
+  'procar': {
+    slug: 'procar', ordinal: '02', eyebrow: 'ESTUDO DE CASO · PRIMEIRO CLIENTE',
+    title: 'PROCAR', subtitle: 'Meu primeiro software comercial, construído para uma oficina real.',
+    description: 'Desenvolvi o PROCAR como meu primeiro projeto vendido a um cliente: uma aplicação de gestão para oficina mecânica, com interface Angular, API em Django REST Framework e persistência de dados. O projeto integra os principais processos do atendimento, do cadastro do veículo à ordem de serviço e ao pagamento.',
+    state: 'Sistema desenvolvido para cliente real · demonstração pública em preparação',
+    highlights: ['Interface Angular com módulos de gestão', 'API Django REST com autenticação e permissões', 'PostgreSQL e execução via Docker'],
+    problem: [
+      'A oficina precisava centralizar informações de clientes, veículos e serviços, reduzindo a dispersão de registros e facilitando o acompanhamento do atendimento.',
+      'A aplicação precisava contemplar processos operacionais e financeiros, com permissões adequadas para funcionários e proprietário.'
+    ],
+    solution: [
+      'Construí uma aplicação com interface Angular, organização por funcionalidades e integração com uma API Django REST. O sistema implementa cadastros, orçamentos, ordens de serviço, inspeções, controle de estoque e pagamentos.',
+      'Para implantação local, a solução possui configuração Docker Compose com PostgreSQL, API Django e interface servida via Nginx. O acesso financeiro possui controles de autorização do lado do servidor.'
+    ],
+    workflow: [
+      {number: '01', title: 'Cliente e veículo', description: 'Registro e associação de informações para identificar o atendimento.'},
+      {number: '02', title: 'Orçamento', description: 'Preparação e aprovação do valor dos serviços e peças.'},
+      {number: '03', title: 'Ordem de serviço', description: 'Acompanhamento das etapas do trabalho e das inspeções.'},
+      {number: '04', title: 'Pagamento e estoque', description: 'Controle dos recebimentos, peças e movimentações conforme as permissões.'}
+    ],
+    contributions: [
+      'Levantamento de necessidades de um cliente real e desenvolvimento da solução.',
+      'Implementação do front-end Angular e dos fluxos de operação.',
+      'Desenvolvimento e integração com API Django REST e banco de dados.',
+      'Configuração do ambiente com Docker e testes de fluxos ponta a ponta.'
+    ],
+    deliverables: ['Gestão de clientes e veículos', 'Orçamentos e ordens de serviço', 'Vistorias e movimentações', 'Controle de estoque e pagamentos'],
+    stack: ['Angular', 'TypeScript', 'Django', 'Django REST Framework', 'PostgreSQL', 'Docker', 'Nginx'],
+    implementation: 'Código-fonte recuperado de uma versão do projeto real. Este estudo de caso não expõe o banco nem a instalação do cliente. Uma experiência de teste público precisa ser implantada separadamente com dados fictícios e controle de acesso.',
+    disclosure: 'O PROCAR é um sistema comercial. A versão demonstrativa pública, quando disponibilizada, deve utilizar apenas dados fictícios e não deve compartilhar credenciais ou informações da oficina.',
+    nextSlug: 'fota-ai-agent', nextTitle: 'FOTA AI Agent'
+  },
   'fota-ai-agent': {
     slug: 'fota-ai-agent', ordinal: '03', eyebrow: 'ESTUDO DE CASO · ENGENHARIA DE IA',
     title: 'FOTA AI Agent', subtitle: 'De alterações de código a análises técnicas mais claras.',
