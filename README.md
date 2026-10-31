@@ -1,122 +1,115 @@
-# Andrews Viana — Portfolio v2.1
+<div align="center">
 
-Portfólio pessoal de **Andrews Viana de Oliveira**. Uma experiência **dark-first** com alternância entre temas e layout responsivo, feita com **Angular standalone + TypeScript** e um laboratório independente de IA aplicada à Engenharia de Software.
+# Andrews Viana · Developer Portfolio
 
-> **Esta é uma versão redesenhada do zero na apresentação visual.** O funcionamento dos analisadores do projeto anterior foi preservado, incluindo os cinco testes da API. O modo demonstrativo funciona com exemplos fictícios; análises verdadeiras com Gemini exigem configuração serverless separada.
+**Android/AOSP · Full Stack · IA aplicada à Engenharia de Software**
 
-## Atualização 2.1 — tema e experiências reais
+Portfólio profissional de **Andrews Viana de Oliveira**, desenvolvido com **Angular, TypeScript e CSS**.
 
-- Tema escuro por padrão, opção **Claro / Escuro** na barra superior e preferência salva localmente no navegador.
-- **PROCAR:** seu primeiro sistema comercial vendido a um cliente real.
-- **FOTA AI Agent e FOTA Log Analyzer:** ferramentas de apoio à análise técnica utilizadas internamente pela web e pelo terminal, descritas em alto nível sem publicar dados da empresa.
-- GitHub pessoal configurado como contato, sem links fictícios para LinkedIn ou e-mail.
-- As imagens dos projetos corporativos continuam ilustrativas. Não substitua por capturas internas sem autorização e revisão de confidencialidade.
+[![Site](https://img.shields.io/badge/Abrir_portf%C3%B3lio-6654E8?style=for-the-badge&logo=vercel&logoColor=white)](https://andrews-viana-portfolio.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-Andrews--Oliveira-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Andrews-Oliveira)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Conectar-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/andrews-viana/)
 
-## Experiência do site
+</div>
 
-- **/** — home editorial com apresentação, trajetória, formação, projetos, tecnologias e contato.
-- **/overview** — visão geral do laboratório GenAI Engineering Studio.
-- **/workspace** — Commit Analyzer e Log Analyzer, com exemplos sintéticos e resultado estruturado.
-- **/history** — histórico local de análises do navegador.
-- **/about** — arquitetura, segurança e restrições do laboratório.
+---
 
-### Estrutura de engenharia
+## ✨ Sobre o projeto
+
+Site pessoal que reúne trajetória profissional, formação, tecnologias e estudos de caso. A experiência é responsiva, oferece **modo claro/escuro** e permite testar demonstrações públicas de sistemas e ferramentas.
+
+O objetivo é mostrar **o problema, as decisões de engenharia e o resultado** de cada projeto, indo além de uma lista de frameworks.
+
+## 🚀 Projetos em destaque
+
+| Projeto | Descrição | Demonstração |
+| --- | --- | --- |
+| **🔧 PROCAR** | Gestão para oficina mecânica: clientes, veículos, orçamentos, OS, inspeções, pagamentos e estoque. **Angular + Django REST + PostgreSQL + Docker**. | [Experimentar PROCAR](https://procar-portfolio-demo.vercel.app/) |
+| **🤖 FOTA AI Agent** | Apoio à análise de commits e diffs, com impactos, riscos e orientações de validação. | [Experimentar o agente](https://fota-engineering-suite-demo.vercel.app/fota-ai-agent/) |
+| **🔍 FOTA Log Analyzer** | Triagem de logs e organização de evidências e hipóteses de falha em atualizações OTA/FOTA. | [Experimentar o analisador](https://fota-engineering-suite-demo.vercel.app/fota-log-analyzer/) |
+| **💡 GenAI Engineering Studio** | Laboratório independente de análise de commits e logs com exemplos sintéticos. | [Explorar o laboratório](https://andrews-viana-portfolio.vercel.app/workspace) |
+
+> **Transparência:** PROCAR, FOTA Engineering Suite e este portfólio são implantações independentes. O PROCAR demonstrativo utiliza **banco isolado, dados fictícios e acesso somente leitura**. As versões públicas dos agentes FOTA são demonstrações com exemplos sintéticos, sem conexão a ferramentas ou dados internos de empresas.
+
+## 🧩 Stack do portfólio
+
+![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS-663399?style=flat-square&logo=css&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat-square&logo=nodedotjs&logoColor=white)
+
+- **Angular standalone** com rotas carregadas sob demanda e componentes separados por funcionalidades.
+- **TypeScript** e modelos tipados para os dados públicos do portfólio.
+- **CSS modular**, responsividade, temas claro/escuro e navegação acessível.
+- **Vercel** para hospedagem do frontend e uma API serverless opcional do laboratório.
+- **Histórico local no navegador** para experiências do laboratório, sem armazenamento de dados de visitantes no portfólio.
+
+## 📂 Organização
 
 ```text
 src/
-  app/
-    core/
-      data/portfolio.data.ts         <- conteúdo público: altere aqui
-      data/demo-fixtures.ts          <- exemplos totalmente fictícios
-      models/                       <- modelos tipados
-      services/                     <- HTTP e histórico local
-    features/
-      portfolio/                     <- home e componentes editoriais
-        components/
-          portfolio-hero.component.ts
-          career-timeline.component.ts
-          project-gallery.component.ts
-      overview/                      <- sobre o laboratório
-      workspace/                     <- fluxo de análise
-      history/                       <- últimos resultados
-      about/                         <- arquitetura
-    shared/
-      lab-nav/                       <- navegação secundária
-      result-panel/                  <- relatório reutilizável
-  styles/
-    tokens.css                       <- cores, tipografia, botões
-    shell.css                        <- cabeçalho, navegação responsiva
-    portfolio.css                    <- landing pessoal, projetos, cards
-    laboratory.css                   <- laboratório e seus componentes
-    responsive.css                   <- breakpoints
-    dark.css                         <- tema escuro, sem alterar o tema claro
-api/analyze.ts                      <- função de servidor com Gemini opcional
-tests/analyze.test.ts                <- testes automatizados da API
-vercel.json                         <- hospedagem estática + function + SPA fallback
+├── app/
+│   ├── core/
+│   │   ├── data/                 # Perfil público e exemplos sintéticos
+│   │   ├── models/               # Interfaces e tipos
+│   │   └── services/             # Integrações e histórico local
+│   ├── features/
+│   │   ├── portfolio/            # Home, projetos e trajetória
+│   │   ├── case-study/           # Estudos de caso
+│   │   ├── overview/             # Apresentação do laboratório
+│   │   ├── workspace/            # Experimentação
+│   │   ├── history/              # Histórico local
+│   │   └── about/                # Arquitetura e limites
+│   └── shared/                   # Componentes reutilizáveis
+├── styles/                       # Design system, temas e responsividade
+api/analyze.ts                    # API serverless opcional
+tests/analyze.test.ts             # Testes da API
+vercel.json                       # Build, funções, rotas e headers
 ```
 
-## Executar no Windows (PowerShell)
+## ▶️ Executar localmente
 
-É recomendado Node.js compatível com as versões declaradas em `package.json` (22.12+ ou 24+).
+**Requisitos:** Node.js compatível com `package.json` (22.12+ ou 24+) e npm.
 
-```powershell
-cd C:\Users\andre\Documents\andrews-viana-portfolio-premium
-npm.cmd install
-npm.cmd run check
-npm.cmd run test:api
-npm.cmd run build
-npm.cmd start
+```bash
+git clone https://github.com/Andrews-Oliveira/Andrews-Viana-Portfolio.git
+cd Andrews-Viana-Portfolio
+npm install
+npm run check
+npm run test:api
+npm start
 ```
 
-Abra **http://localhost:4200**. Use `npm.cmd`, pois o PowerShell do Windows pode bloquear `npm.ps1`.
+Abra **http://localhost:4200**. Para gerar uma build de produção, execute `npm run build`.
 
-### Ajuste antes da publicação
+No PowerShell com restrição de execução de scripts, pode ser necessário usar `npm.cmd` em vez de `npm`.
 
-Edite **`src/app/core/data/portfolio.data.ts`** para corrigir qualquer texto da sua trajetória e informar suas URLs profissionais reais em `social`:
+### Personalização
 
-```typescript
-social: {
-  github: 'https://github.com/SEU-USUARIO',
-  linkedin: 'https://www.linkedin.com/in/SEU-PERFIL/',
-  email: 'voce@exemplo.com'
-}
-```
+Os dados públicos ficam em [`src/app/core/data/portfolio.data.ts`](src/app/core/data/portfolio.data.ts). Alterações no texto dos projetos, links de demonstração, experiência e contatos podem ser feitas nesse arquivo.
 
-Esses links são **apenas exemplos no README**. Nenhum URL foi inventado dentro da aplicação. Remova links sem conteúdo ou que não queira publicar. Para disponibilizar o currículo, coloque um PDF público seu em `public/curriculo.pdf` e configure `resume: '/curriculo.pdf'`.
+A pasta `public/` contém os recursos estáticos autorizados para publicação. Não adicione dados pessoais de clientes, logs internos, credenciais ou código privado.
 
-## IA / API opcional
+### Modo de IA opcional
 
-O modo **Demo estática** aceita amostras sintéticas já disponíveis e apresenta saídas determinísticas. Não gera relatórios inéditos com IA real.
+O laboratório possui um **modo demonstrativo** baseado em amostras fictícias. A integração opcional com Gemini é implementada na função `api/analyze.ts`, não no navegador.
 
-Para o modo real, a função `api/analyze.ts` exige `LIVE_AI_ENABLED=true`, `GEMINI_API_KEY`, `PORTFOLIO_ACCESS_CODE` (mínimo 12 caracteres) e `GEMINI_MODEL` configurados **somente no servidor**. Em desenvolvimento, o Angular (`npm start`) **não executa a função**; utilize o Vercel CLI (`npx.cmd vercel dev`) para testar a rota de API.
+As variáveis de ambiente para esse modo devem ser configuradas **somente no servidor**, conforme [`.env.example`](.env.example) e [`docs/DEPLOY_VERCEL.md`](docs/DEPLOY_VERCEL.md). **Nunca** publique tokens, chaves de API ou códigos de acesso no frontend ou no Git.
 
-**Antes de ativar live**, confirme que o modelo desejado existe na sua conta/provedor, revise limites de cota, custos e proteção contra abusos. Não coloque a chave no `environment.ts`, nos serviços Angular, no Git ou no código cliente.
+## 🔐 Privacidade e responsabilidade técnica
 
-## Vercel
+- Os estudos de caso apresentam os projetos de alto nível, sem reproduzir materiais internos.
+- As telas ilustrativas do portfólio não devem ser confundidas com capturas de sistemas corporativos.
+- As demos FOTA públicas não executam integrações corporativas nem representam as ferramentas privadas.
+- O backend e o banco da demonstração PROCAR são externos a este repositório.
 
-O `vercel.json` declara:
+---
 
-- `npm run build`
-- `dist/andrews-viana-portfolio/browser` como pasta pública
-- redirecionamento SPA para rotas Angular
-- função `api/analyze.ts`
+<div align="center">
 
-Publique o repositório pessoal e importe-o na Vercel. Mantenha a função live desabilitada até concluir a revisão de segurança e configurar os segredos no painel do servidor. Verifique se o plano de hospedagem atende ao seu uso.
+**Desenvolvido por Andrews Viana de Oliveira — Manaus, Amazonas**
 
-## Segurança e transparência
+[Portfólio](https://andrews-viana-portfolio.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/andrews-viana/) · [E-mail](mailto:andrewsviana2003@gmail.com)
 
-- **FOTA AI Agent / FOTA Log Analyzer**: apresentados como experiências profissionais de alto nível. Não publicamos código, logs, dados nem arquitetura internos.
-- **GenAI Engineering Studio**: implementação pessoal independente, construída como demonstração pública com dados sintéticos.
-- **PROCAR**: apresentação como projeto; sem dados reais de clientes ou acesso ao sistema privado.
-- Os cartões de projeto e a arte do hero são **ilustrações de interface**, não capturas de sistemas corporativos.
-- Links de contato são opcionais e exibidos apenas se forem preenchidos.
-
-## Verificação desta entrega
-
-- Foram executados localmente **5 testes de API**, todos passando.
-- Foram geradas e inspecionadas prévias estáticas da composição visual para desktop e celular, sem overflow horizontal nas larguras testadas.
-- O `npm install` **não concluiu neste ambiente**, portanto `npm run check` e o build Angular completo desta versão precisam ser validados no seu Windows. Não confundir a prévia estática com um build Angular final.
-
-## Próximos aprimoramentos
-
-Adicionar URL de GitHub e LinkedIn, currículo, screenshots ou imagens autorizadas dos projetos, avaliações mensuráveis do LLM e domínio próprio opcional.
+</div>
