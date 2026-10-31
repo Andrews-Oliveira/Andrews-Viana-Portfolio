@@ -13,17 +13,17 @@ import {PortfolioProject} from '../../../core/models/portfolio.model';
         <div class="projects-grid">
           @for(project of projects(); track project.index) {
             <article class="project-card" [class.project-card--featured]="project.index === '01'">
-              <div class="project-art" [class.project-art--studio]="project.index === '01'" [class.project-art--procar]="project.index === '02'" [class.project-art--code]="project.index === '03'" [class.project-art--logs]="project.index === '04'">
+              <div class="project-art" [class.project-art--studio]="project.index === '04'" [class.project-art--procar]="project.index === '01'" [class.project-art--code]="project.index === '02'" [class.project-art--logs]="project.index === '03'">
                 <span class="project-art-count">PROJECT / {{project.index}}</span>
                 @switch(project.index) {
-                  @case('01') {
+                  @case('04') {
                     <div class="art-studio-interface"><div class="art-studio-nav"><span class="art-mini-brand">✳</span><span>GenAI Studio</span><span class="art-dots">•••</span></div><div class="art-studio-caption">Análise inteligente</div><div class="art-studio-title">Seu código, mais claro.</div><div class="art-studio-widgets"><div><span>⌘</span> Code review <b>↗</b></div><div><span>⌁</span> Log insights <b>↗</b></div></div><div class="art-studio-footer">✦ Powered by LLMs</div></div>
                     <div class="art-floating-bubble">✦ AI INSIGHTS</div>
                   }
-                  @case('02') {
-                    <div class="art-procar-interface"><div class="art-procar-top"><span>◉</span> PROCAR <i>↗</i></div><div class="art-procar-caption">Gestão inteligente de oficina</div><div class="art-procar-lines"><span></span><span></span><span></span></div><div class="art-procar-cards"><div><small>Clientes</small><strong>CRM</strong></div><div><small>Ordens</small><strong>O.S.</strong></div><div><small>Estoque</small><strong>ERP</strong></div></div></div>
+                  @case('01') {
+                    <div class="art-procar-interface"><div class="art-procar-top"><img class="art-procar-logo" src="/assets/procar-logo.png" alt="" loading="lazy"/> PROCAR <i>↗</i></div><div class="art-procar-caption">Gestão inteligente de oficina</div><div class="art-procar-lines"><span></span><span></span><span></span></div><div class="art-procar-cards"><div><small>Clientes</small><strong>CRM</strong></div><div><small>Ordens</small><strong>O.S.</strong></div><div><small>Estoque</small><strong>ERP</strong></div></div></div>
                   }
-                  @case('03') {
+                  @case('02') {
                     <div class="art-code-interface"><div class="art-code-header">commit.diff <span>↗</span></div><div><span>+</span> fix: improve validation</div><div><span>+</span> add automated checks</div><div class="art-code-analysis"><strong>✦ AI REVIEW</strong><small>Impacto · Riscos · QA</small></div></div>
                   }
                   @default {
@@ -36,13 +36,13 @@ import {PortfolioProject} from '../../../core/models/portfolio.model';
                 <div class="project-actions">
                   @if(project.internalRoute){<a [routerLink]="project.internalRoute" class="project-link">Estudo de caso <span>↗</span></a>}
                   @else if(project.externalUrl){<a [href]="project.externalUrl" target="_blank" rel="noopener noreferrer" class="project-link">Abrir projeto <span>↗</span></a>}
-                  @if(project.demoUrl){<a [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="project-demo-link" [attr.aria-label]="'Testar demonstração de ' + project.title + ' (nova aba)'">Testar demo ↗</a>}
+                  @if(project.demoUrl){<a [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="project-demo-link" [attr.aria-label]="'Testar demonstração de ' + project.title + ' (nova aba)'">Experimentar ↗</a>}
                 </div>
               </div><p class="project-notice">{{project.notice}}</p></div>
             </article>
           }
         </div>
-        <div class="projects-disclaimer"><span>ⓘ</span> Os projetos internos são descritos em alto nível. As demos públicas independentes processam exemplos fictícios localmente, sem LLM externo.</div>
+        <div class="projects-disclaimer"><span>ⓘ</span> Os projetos profissionais são descritos em alto nível. As demos FOTA usam exemplos fictícios e processamento local; o PROCAR tem ambiente isolado e somente leitura.</div>
       </div>
     </section>
   `

@@ -11,7 +11,7 @@
           <p class="case-introduction">{{c.description}}</p>
           <div class="case-actions">
             <span class="case-status"><span class="case-status-dot" aria-hidden="true"></span>{{c.state}}</span>
-            @if(c.demoUrl){<a class="case-secondary-link" [href]="c.demoUrl" target="_blank" rel="noopener noreferrer">Testar demonstração real ↗</a>}
+            @if(c.demoUrl){<a class="case-secondary-link" [href]="c.demoUrl" target="_blank" rel="noopener noreferrer">Abrir demonstração pública ↗</a>}
           </div>
         </div>
         <aside class="case-hero-side" aria-label="Visão geral do projeto">
@@ -20,7 +20,7 @@
           @if(c.slug === 'procar') {
             <div class="case-side-art case-procar-brand"><img src="/assets/procar-logo.png" alt="Logo original do sistema PROCAR" /></div>
           } @else {
-            <div class="case-side-art" aria-hidden="true">{{c.ordinal === '03' ? '{ diff }' : '$_ logs'}}</div>
+            <div class="case-side-art" aria-hidden="true">{{c.slug === 'fota-ai-agent' ? '{ diff }' : '$_ logs'}}</div>
           }
           @for (feature of c.highlights; track feature) {
             <div class="case-side-feature"><span>✓</span>{{feature}}</div>
@@ -46,7 +46,7 @@
       </section>
       <div class="case-section-grid case-details">
         <section class="case-panel"><span class="case-section-number">04 / CONTRIBUIÇÃO</span><h2>Meu papel no projeto</h2><ul class="case-list">@for (s of c.contributions; track s) {<li>{{s}}</li>}</ul></section>
-        <section class="case-panel"><span class="case-section-number">05 / RESULTADOS DA FERRAMENTA</span><h2>O que ela entrega</h2><ul class="case-list">@for (s of c.deliverables; track s) {<li>{{s}}</li>}</ul></section>
+        <section class="case-panel"><span class="case-section-number">05 / ENTREGAS</span><h2>Entregas do projeto</h2><ul class="case-list">@for (s of c.deliverables; track s) {<li>{{s}}</li>}</ul></section>
       </div>
       <section class="case-tech" aria-label="Tecnologias e contexto de implementação">
         <div><span class="case-section-number">STACK UTILIZADA</span><div class="case-chips">@for (skill of c.stack; track skill) {<span>{{skill}}</span>}</div></div>

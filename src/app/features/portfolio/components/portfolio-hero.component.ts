@@ -18,9 +18,10 @@ import {PortfolioProfile} from '../../../core/models/portfolio.model';
           <p class="hero-description">Desenvolvedor de Software com experiência em <strong>Android/AOSP</strong>, aplicações full stack e integração de <strong>inteligência artificial generativa</strong>.</p>
           <div class="hero-ctas">
             <a class="button button-primary" href="#projetos">Explorar projetos <span aria-hidden="true">↗</span></a>
-            <a class="button button-outline" href="https://fota-engineering-suite-demo.vercel.app/" target="_blank" rel="noopener noreferrer">Testar agentes FOTA <span aria-hidden="true">↗</span></a>
+            <a class="button button-outline" href="https://procar-portfolio-demo.vercel.app/" target="_blank" rel="noopener noreferrer">Testar PROCAR <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="hero-bottom"><span class="hero-line"></span><span>Manaus, Amazonas · Brasil</span><span class="hero-star">✦</span><span>Engenharia de Software</span></div>
+          <div class="hero-featured"><span class="hero-featured-label">TAMBÉM DISPONÍVEL</span><a href="https://fota-engineering-suite-demo.vercel.app/" target="_blank" rel="noopener noreferrer">FOTA Engineering Suite <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-bottom"><span class="hero-line"></span><span>Manaus, Amazonas · Brasil</span><span class="hero-star">✦</span><span>Engenharia de Software</span>@for(language of profile().languages; track language.name) {<span class="hero-language">{{language.name}} · {{language.level}}</span>}</div>
         </div>
         <div class="hero-visual" aria-label="Ilustração conceitual de uma interface de análise de software com IA" role="img">
           <div class="visual-orbit visual-orbit--one"></div><div class="visual-orbit visual-orbit--two"></div>

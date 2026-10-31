@@ -123,3 +123,14 @@ html[data-theme='dark'] .stack-list>div{border-color:#34405b}
 html[data-theme='dark'] .stack-list small,html[data-theme='dark'] .check-list{color:#bbc3db}
 html[data-theme='dark'] .environment-pill{background:#153e39;border-color:#2d756b;color:#9bf2dd}
 html[data-theme='dark'] .result-disclaimer,html[data-theme='dark'] .editor-notice{overflow-wrap:anywhere}
+
+/* Estado escuro de projetos e idiomas */
+html[data-theme='dark'] .hero-featured{color:#b1b9d0}
+html[data-theme='dark'] .hero-featured a{color:#c7b9ff;text-decoration-color:#8679c6}
+html[data-theme='dark'] .hero-language{background:#302747;border-color:#655487;color:#ded3ff}
+html[data-theme='dark'] .project-card--featured{border-color:#3c7d74;box-shadow:0 17px 50px #04091799}
+html[data-theme='dark'] .project-card--featured .project-art{border-color:#3c7d74}
+html[data-theme='dark'] .language-proficiency{background:#171f34;border-color:#35405a}
+html[data-theme='dark'] .language-proficiency-title{color:#c7cde2}
+html[data-theme='dark'] .language-proficiency-item{color:#edf0ff}
+html[data-theme='dark'] .language-proficiency-level{background:#302747;color:#e0d7ff}
