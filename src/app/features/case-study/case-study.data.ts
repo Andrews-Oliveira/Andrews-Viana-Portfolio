@@ -24,7 +24,7 @@ export interface TechnicalCase {
 
 export const TECHNICAL_CASES: Record<string, TechnicalCase> = {
   'procar': {
-    slug: 'procar', ordinal: '02', eyebrow: 'ESTUDO DE CASO · PRIMEIRO CLIENTE',
+    slug: 'procar', ordinal: '01', eyebrow: 'ESTUDO DE CASO · PRIMEIRO CLIENTE',
     title: 'PROCAR', subtitle: 'Meu primeiro software comercial, construído para uma oficina real.',
     description: 'Desenvolvi o PROCAR como meu primeiro projeto vendido a um cliente: uma aplicação de gestão para oficina mecânica, com interface Angular, API em Django REST Framework e persistência de dados. O projeto integra os principais processos do atendimento, do cadastro do veículo à ordem de serviço e ao pagamento.',
     state: 'Sistema desenvolvido para cliente real · demonstração pública somente leitura',
@@ -57,7 +57,7 @@ export const TECHNICAL_CASES: Record<string, TechnicalCase> = {
     nextSlug: 'fota-ai-agent', nextTitle: 'FOTA AI Agent'
   },
   'fota-ai-agent': {
-    slug: 'fota-ai-agent', ordinal: '03', eyebrow: 'ESTUDO DE CASO · ENGENHARIA DE IA',
+    slug: 'fota-ai-agent', ordinal: '02', eyebrow: 'ESTUDO DE CASO · ENGENHARIA DE IA',
     title: 'FOTA AI Agent', subtitle: 'Análise de commits e regras FOTA da Positivo e de integrações ODM/Android.',
     description: 'Desenvolvi uma ferramenta para apoiar a análise de commits e diffs em projetos de software da Positivo Tecnologia. O agente recebe informações de alterações de código e organiza uma análise técnica orientada à demanda, com resumos, impactos e recomendações de validação.',
     state: 'Ferramenta interna · demo pública com dados sintéticos',
@@ -90,7 +90,7 @@ export const TECHNICAL_CASES: Record<string, TechnicalCase> = {
     nextSlug: 'fota-log-analyzer', nextTitle: 'FOTA Log Analyzer'
   },
   'fota-log-analyzer': {
-    slug: 'fota-log-analyzer', ordinal: '04', eyebrow: 'ESTUDO DE CASO · DIAGNÓSTICO ASSISTIDO POR IA',
+    slug: 'fota-log-analyzer', ordinal: '03', eyebrow: 'ESTUDO DE CASO · DIAGNÓSTICO ASSISTIDO POR IA',
     title: 'FOTA Log Analyzer', subtitle: 'Diagnóstico de falhas de atualização FOTA/OTA com evidências verificáveis.',
     description: 'Criei uma ferramenta para auxiliar a investigação de falhas técnicas em projetos da Positivo Tecnologia. Ela recebe logs, identifica sinais relevantes e utiliza LLMs para organizar hipóteses de causa e possíveis próximos passos de diagnóstico.',
     state: 'Ferramenta interna · demo pública com dados sintéticos',
