@@ -21,3 +21,9 @@
 .lab-teaser-secondary{color:#fff;font-size:12px;font-weight:800;text-decoration:underline;text-underline-offset:4px}
 .lab-teaser-secondary:hover{color:#ffdfc6}
 @media(max-width:680px){.project-footer:has(.project-demo-link){align-items:flex-start}.project-actions{justify-content:flex-start}.lab-teaser-actions{align-items:flex-start;flex-direction:column}}
+
+/* Language proficiency — kept separate from programming languages */
+.language-proficiency{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:24px;padding:16px 20px;background:#fff;border:1px solid #e8e8f2;border-radius:14px}
+.language-proficiency-title{font-size:10px;letter-spacing:.13em;font-weight:850;color:#747a94;margin-right:7px}
+.language-proficiency-item{display:inline-flex;align-items:center;gap:10px;font-size:13px;color:#353b55}
+.language-proficiency-level{border-radius:999px;background:#f0ecff;color:#674cdb;padding:7px 12px;font-size:11px;font-weight:800}
