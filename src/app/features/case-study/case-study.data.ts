@@ -27,7 +27,8 @@ export const TECHNICAL_CASES: Record<string, TechnicalCase> = {
     slug: 'procar', ordinal: '02', eyebrow: 'ESTUDO DE CASO · PRIMEIRO CLIENTE',
     title: 'PROCAR', subtitle: 'Meu primeiro software comercial, construído para uma oficina real.',
     description: 'Desenvolvi o PROCAR como meu primeiro projeto vendido a um cliente: uma aplicação de gestão para oficina mecânica, com interface Angular, API em Django REST Framework e persistência de dados. O projeto integra os principais processos do atendimento, do cadastro do veículo à ordem de serviço e ao pagamento.',
-    state: 'Sistema desenvolvido para cliente real · demonstração pública em preparação',
+    state: 'Sistema desenvolvido para cliente real · demonstração pública somente leitura',
+    demoUrl: 'https://procar-portfolio-demo.vercel.app/',
     highlights: ['Interface Angular com módulos de gestão', 'API Django REST com autenticação e permissões', 'PostgreSQL e execução via Docker'],
     problem: [
       'A oficina precisava centralizar informações de clientes, veículos e serviços, reduzindo a dispersão de registros e facilitando o acompanhamento do atendimento.',
@@ -51,8 +52,8 @@ export const TECHNICAL_CASES: Record<string, TechnicalCase> = {
     ],
     deliverables: ['Gestão de clientes e veículos', 'Orçamentos e ordens de serviço', 'Vistorias e movimentações', 'Controle de estoque e pagamentos'],
     stack: ['Angular', 'TypeScript', 'Django', 'Django REST Framework', 'PostgreSQL', 'Docker', 'Nginx'],
-    implementation: 'Código-fonte recuperado de uma versão do projeto real. Este estudo de caso não expõe o banco nem a instalação do cliente. Uma experiência de teste público precisa ser implantada separadamente com dados fictícios e controle de acesso.',
-    disclosure: 'O PROCAR é um sistema comercial. A versão demonstrativa pública, quando disponibilizada, deve utilizar apenas dados fictícios e não deve compartilhar credenciais ou informações da oficina.',
+    implementation: 'Demonstração pública baseada no projeto Angular + Django, com banco PostgreSQL independente, conta de visitante, dados fictícios e bloqueio de escrita na API. O ambiente real da oficina não está conectado à demonstração.',
+    disclosure: 'A demonstração pública é somente leitura e utiliza registros fictícios. Ela não substitui a instalação operacional do cliente nem permite manipular os dados da oficina.',
     nextSlug: 'fota-ai-agent', nextTitle: 'FOTA AI Agent'
   },
   'fota-ai-agent': {
