@@ -14,6 +14,12 @@
 <section class="section stack-section" id="tecnologias" aria-labelledby="stack-title">
   <div class="container"><div class="section-heading"><div><span class="section-kicker"><span class="kicker-dot"></span> MINHA CAIXA DE FERRAMENTAS</span><h2 id="stack-title">Tecnologias que fazem <span class="text-violet">parte da jornada.</span></h2></div><p>Do front-end à infraestrutura, passando por APIs e engenharia de IA.</p></div>
     <div class="skills-grid">@for(group of profile.skillGroups;track group.label){<article class="skill-card"><div class="skill-head"><span class="skill-symbol">{{ $index === 0 ? '◈' : $index === 1 ? '⌘' : $index === 2 ? '⬡' : '✳' }}</span><span class="skill-index">0{{ $index + 1 }}</span></div><h3>{{group.label}}</h3><div class="skill-pills">@for(skill of group.skills;track skill){<span>{{skill}}</span>}</div></article>}</div>
+    <div class="language-proficiency" aria-label="Idiomas">
+      <span class="language-proficiency-title">IDIOMAS</span>
+      @for(language of profile.languages; track language.name) {
+        <span class="language-proficiency-item"><strong>{{language.name}}</strong><span class="language-proficiency-level">{{language.level}}</span></span>
+      }
+    </div>
     <p class="skill-disclosure">Competências adquiridas em contextos distintos: experiência profissional, projetos próprios e formação acadêmica.</p>
   </div>
 </section>

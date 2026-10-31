@@ -40,6 +40,11 @@ export interface SkillGroup {
   skills: string[];
 }
 
+export interface LanguageProficiency {
+  name: string;
+  level: string;
+}
+
 export interface PortfolioProfile {
   name: string;
   initials: string;
@@ -51,5 +56,6 @@ export interface PortfolioProfile {
   experience: ProfessionalExperience[];
   education: EducationItem[];
   skillGroups: SkillGroup[];
+  languages: LanguageProficiency[];
   projects: PortfolioProject[];
 }

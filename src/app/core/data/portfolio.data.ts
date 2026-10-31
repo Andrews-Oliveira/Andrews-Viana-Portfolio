@@ -43,6 +43,7 @@ export const PORTFOLIO_PROFILE: PortfolioProfile = {
     {label: 'Engenharia & Infra', skills: ['Git', 'Linux', 'Docker', 'Testes', 'Debugging', 'Arquitetura de software']},
     {label: 'GenAI & LLMs', skills: ['Gemini', 'Ollama', 'Qwen', 'Prompt Engineering', 'Structured Output', 'LLM Integration']}
   ],
+  languages: [{ name: 'Inglês', level: 'Intermediário' }],
   projects: [
     {index: '01', category: 'PROJETO INDEPENDENTE · GENAI', title: 'GenAI Engineering Studio', summary: 'Laboratório interativo para analisar commits e logs com exemplos sintéticos, relatórios estruturados e uma API serverless preparada para integrar LLMs.', tags: ['Angular', 'TypeScript', 'Gemini API', 'Vercel'], status: 'Demonstração disponível', internalRoute: '/workspace', notice: 'Projeto pessoal independente, com entradas e dados fictícios.'},
     {index: '02', category: 'PROJETO COMERCIAL · FULL STACK', title: 'PROCAR', summary: 'Sistema de gestão desenvolvido para uma oficina real, com clientes, veículos, orçamentos, ordens de serviço, inspeções, pagamentos e estoque. Explore a demonstração pública em modo somente leitura, com dados fictícios e infraestrutura isolada.', tags: ['Angular', 'Django', 'PostgreSQL', 'Docker'], status: 'Demo pública disponível', internalRoute: '/case/procar', demoUrl: 'https://procar-portfolio-demo.vercel.app/', notice: 'Ambiente de demonstração independente, somente leitura, sem dados da oficina.'},
