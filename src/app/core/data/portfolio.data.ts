@@ -19,7 +19,7 @@ export const PORTFOLIO_PROFILE: PortfolioProfile = {
     linkedin: 'https://www.linkedin.com/in/andrews-viana/',
     whatsapp: 'https://wa.me/5592981704823',
     phone: '+55 (92) 98170-4823',
-    // email: 'SEU-EMAIL',
+    email: 'andrewsviana2003@gmail.com',
     // resume: '/curriculo.pdf'
   },
   experience: [
