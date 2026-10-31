@@ -23,12 +23,16 @@ export const PORTFOLIO_PROFILE: PortfolioProfile = {
     // resume: '/curriculo.pdf'
   },
   experience: [
-    { period: 'FEV 2026 — ATUAL', company: 'Positivo Tecnologia', position: 'Estagiário de Desenvolvimento de Software · Android/AOSP',
-      description: 'Atuação em projetos Android/AOSP com análise técnica de código, investigação de falhas e fluxos de atualização de dispositivos.',
+    { period: 'FEV 2026 — ATUAL', company: 'Positivo Tecnologia', position: 'Estagiário de Desenvolvimento Android · AOSP',
+      description: 'Atuo no desenvolvimento e na customização de sistemas Android baseados em AOSP, abrangendo builds, atualizações OTA/FOTA, funcionalidades e aplicativos. Participo também da automação de processos, análise de falhas, testes e documentação técnica.',
       highlights: [
-        'Análise de logs, código-fonte e comportamento de sistemas Android.',
-        'Desenvolvimento e integração de agentes com LLMs para apoiar análises de commits e logs conforme demandas técnicas.',
-        'Prática com Git, Linux, debugging, validação e processos de atualização FOTA/OTA.'
+        'Customização e manutenção do AOSP, com desenvolvimento e evolução de aplicativos e funcionalidades Android.',
+        'Geração, controle e validação de builds Android e pacotes de atualização OTA/FOTA.',
+        'Automação de rotinas de desenvolvimento e engenharia com scripts.',
+        'Investigação de falhas, análise de logs, diagnóstico e correção de bugs.',
+        'Testes e validações em dispositivos reais e emuladores.',
+        'Elaboração de documentação técnica e participação em processos de deploy.',
+        'Suporte a ambientes com Docker, Kubernetes e serviços AWS.'
       ]
     }
   ],
